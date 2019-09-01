@@ -1,3 +1,4 @@
+# Code to remove duplicate images in a dataset.
 from scipy.misc import imread
 import numpy as np
 import os
@@ -10,4 +11,3 @@ for i in dataset:
             im2 = imread(path + j)
             if np.all(im1 - im2 == 0):
                 os.remove(path + j)
-
